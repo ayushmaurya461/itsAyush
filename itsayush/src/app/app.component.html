@@ -1,0 +1,22 @@
+<div id="main-container">
+  <div class="content">
+    <div class="sidebar show">
+      <app-sidebar></app-sidebar>
+    </div>
+    <button class="collapsed" #collapseButton (click)="collapseSidebar()">
+      <img [src]="collapseIcon" alt="" />
+    </button>
+    <div class="pages sidebar-shown">
+      <main [@routeAnimation]="getRouteAnimationData(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
+      </main>
+      <!-- <app-footer></app-footer> -->
+    </div>
+    <div class="quote hidden">
+      <app-get-a-quote></app-get-a-quote>
+    </div>
+    <button (click)="getAQuote()" class="get-a-quote-button">
+      {{ quote }}
+    </button>
+  </div>
+</div>

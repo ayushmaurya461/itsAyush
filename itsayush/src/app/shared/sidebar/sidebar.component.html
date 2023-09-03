@@ -1,0 +1,20 @@
+<nav>
+  <h2>AYUSH MAURYA</h2>
+  <ul>
+    <li routerLink="/home" routerLinkActive="active-link">HOME</li>
+    <li routerLink="/biography" routerLinkActive="active-link">BIOGRAPHY</li>
+    <li routerLink="/portfolio" routerLinkActive="active-link">PORTFOLIO</li>
+    <li routerLink="/services" routerLinkActive="active-link">SERVICES</li>
+    <li routerLink="/news" routerLinkActive="active-link">NEWS & TIPS</li>
+    <li routerLink="/contact" routerLinkActive="active-link">CONTACT</li>
+  </ul>
+</nav>
+
+<div class="links">
+  <ul>
+    <li *ngFor="let link of links">
+      <img [src]="link.image" alt="{{ link.title }}" />
+    </li>
+  </ul>
+  <p>© 2023, Ayush Maurya</p>
+</div>

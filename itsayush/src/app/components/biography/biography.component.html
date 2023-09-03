@@ -1,0 +1,64 @@
+<div class="container">
+  <h1>BIOGRAPHY</h1>
+  <div class="text">
+    <p>
+      As an experienced website developer, I've embarked on an exhilarating
+      journey of coding and crafting web elements that captivate audiences
+      worldwide. With a passion for collaborating with fresh faces, I believe
+      that new people bring novel experiences, enriching my creative odyssey.
+      Join me in the ever-evolving realm of web development!
+    </p>
+  </div>
+  <div class="cards">
+    <div class="card__head">
+      <ul>
+        <li
+          [ngClass]="cardData == 'experience' ? 'activeLink' : ''"
+          (click)="handleCardsData('experience')"
+        >
+          EXPERIENCE
+        </li>
+        <li
+          (click)="handleCardsData('education')"
+          [ngClass]="cardData == 'education' ? 'activeLink' : ''"
+        >
+          EDUCATION
+        </li>
+        <li
+          (click)="handleCardsData('skills')"
+          [ngClass]="cardData == 'skills' ? 'activeLink' : ''"
+        >
+          SKILLS
+        </li>
+      </ul>
+    </div>
+    <div class="data">
+      <ul class="experience" *ngIf="cardData == 'experience'">
+        <li *ngFor="let exp of experience" [@skewAnimation]>
+          <p class="company">
+            {{ exp.company | titlecase }} ({{ exp.duration }})
+          </p>
+          <p class="position">{{ exp.position }}</p>
+          <p class="description">{{ exp.description }}</p>
+        </li>
+      </ul>
+      <ul class="experience" *ngIf="cardData == 'education'">
+        <li *ngFor="let edu of education" [@skewAnimation]>
+          <p class="company">
+            {{ edu.college | titlecase }} ({{ edu.duration }})
+          </p>
+          <p class="position">{{ edu.degree }}</p>
+          <p class="description">{{ edu.description }}</p>
+        </li>
+      </ul>
+      <ul class="skills" *ngIf="cardData == 'skills'">
+        <li *ngFor="let skill of skills" [@skewAnimation]>
+          <div>
+            <p>{{ skill.language }}</p>
+            <p>{{ skill.rating * 10 }}%</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

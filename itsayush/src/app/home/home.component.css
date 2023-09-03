@@ -1,0 +1,51 @@
+.home-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.image-container {
+  height: 500px;
+  width: 50%;
+  padding: 20px;
+  position: relative;
+}
+
+.image-container img {
+  height: 45vh;
+  width: 100%;
+  position: relative;
+  border: 5px solid black;
+  z-index: 1;
+  margin-top: 200px;
+}
+
+.image-container::before {
+  content: "";
+  background-color: #ffcc0dff;
+  height: 450px;
+  position: absolute;
+  top: 150px;
+  left: 30%;
+  width: 120%;
+  z-index: 0;
+}
+
+.bio-container {
+  height: 500px;
+  width: 50%;
+  margin-top: 200px;
+  padding: 5rem 2rem;
+  position: relative;
+}
+
+.bio-container h1 {
+  font-size: 5rem;
+}
+.bio-container h1 span {
+  text-decoration: underline;
+}
+.bio-container p {
+  margin-top: 20px;
+  font-size: 20px;
+}

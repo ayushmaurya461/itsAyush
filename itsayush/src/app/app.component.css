@@ -1,0 +1,20 @@
+button.expanded {
+  height: 35px;
+  width: 40px;
+  position: absolute;
+  background-color: black;
+  border: none;
+}
+button.collapsed {
+  height: 35px;
+  width: 40px;
+  position: absolute;
+  border: none;
+  background-color: black;
+}
+
+button img {
+  height: 100%;
+  width: 100%;
+  filter: invert(1);
+}

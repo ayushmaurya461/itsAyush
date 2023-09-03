@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>SERVICES</h1>
+  <div class="text">
+    <p>
+      I specialize in turning ambitious business dreams into profit-generating
+      realities! Whether it's boosting your online presence, driving waves of
+      web traffic, or crafting personalized web solutions just for you – I've
+      got you covered. Let's connect and turbocharge your success journey!
+    </p>
+  </div>
+  <div class="services">
+    <ul>
+      <li *ngFor="let service of services">
+        <h2>{{ service.name }}</h2>
+        <p>{{ service.description }}</p>
+      </li>
+    </ul>
+  </div>
+</div>

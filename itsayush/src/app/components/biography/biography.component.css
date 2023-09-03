@@ -1,0 +1,72 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card__head ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card__head ul li {
+  font-size: 22px;
+  margin-top: 50px;
+  min-width: 180px;
+  cursor: pointer;
+  border: none;
+  border-right: 4px solid black;
+}
+.card__head ul li:last-child {
+  border: none;
+}
+
+.cards .data ul {
+  list-style-type: none;
+}
+
+.cards .data ul li {
+  font-size: 22px;
+  margin-top: 30px;
+  min-width: 180px;
+  padding: 30px;
+  cursor: pointer;
+  box-shadow: 20px 0px 0px #ffcc0dff;
+  border: none;
+  text-align: start;
+  background-color: rgb(241, 241, 241);
+}
+
+.cards .data ul li .company {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.cards .data ul li .position {
+  font-size: 30px;
+  margin-top: 20px;
+}
+.cards .data ul li .description {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.skills li {
+  padding: 5px !important ;
+  box-shadow: 20px 0px 0px #ffcc0dff;
+}
+.skills li div {
+  display: flex;
+  padding: 5px;
+  width: 100%;
+  background-color: transparent;
+  justify-content: space-between;
+  z-index: 1;
+  position: relative;
+}
+
+.activeLink {
+  background-color: #ffcc0dff;
+  /* border-bottom: 4px solid #ffcc0dff !important; */
+}
