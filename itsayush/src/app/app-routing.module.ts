@@ -63,6 +63,7 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
+
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes)],
 };
